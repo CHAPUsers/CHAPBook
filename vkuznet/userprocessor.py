@@ -27,8 +27,6 @@ class UserProcessor(PipelineItem):
         # define pipeline object
         pipeline = PipelineItem()
         
-        # I will add more code later
-        
         # basic analysis
         from nexusformat.nexus import NXgroup
         nxobject = pipeline.unwrap_pipelinedata(data)
