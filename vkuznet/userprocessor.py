@@ -27,30 +27,7 @@ class UserProcessor(PipelineItem):
         # define pipeline object
         pipeline = PipelineItem()
         
-        # basic analysis
-        from nexusformat.nexus import NXgroup
-        nxobject = pipeline.unwrap_pipelinedata(data)
-        
-        # Find the NXdata in nxobject
-        def get_nxdata(nxgroup):
-            nxdata = nxgroup.plottable_data
-            if nxdata is not None:
-                return nxdata
-            for k, v in nxgroup.items():
-                if isinstance(v, NXgroup):
-                    nxdata = get_nxdata(v)
-                    if nxdata is not None:
-                        return nxdata
-        nxdata = get_nxdata(nxobject)
-        
-        # matplotlib imports
-        import matplotlib.pyplot as plt
-        # Plot the NXdata & return a matplotlib figure
-        fig, ax = plt.subplots()
-        self.logger.info("nxdata")
-        print(nxdata.tree)
-        nxdata.plot(figure=fig)
-        
+        print("hello")
 
         # and we return data back to pipeline
         return data
