@@ -1,0 +1,3 @@
+pipeline:
+  - users.rolfverberg.userprocessor.UserProcessor: {}
+  - common.PrintProcessor: {}
