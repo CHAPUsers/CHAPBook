@@ -1,0 +1,3 @@
+pipeline:
+  - common.PrintProcessor: {}
+  - users.vkuznet.userprocessor.UserProcessor: {}

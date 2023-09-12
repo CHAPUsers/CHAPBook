@@ -22,8 +22,10 @@ class UserProcessor(PipelineItem):
 
         ### Welcome to CHAP notebook, user vkuznet
 
-        print("Hello World")
-        
+        # CHAP imports
+        from CHAP.pipeline import PipelineItem
+        # define pipeline object
+        pipeline = PipelineItem()
 
         # and we return data back to pipeline
         return data
